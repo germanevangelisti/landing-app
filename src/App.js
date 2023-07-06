@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+import AnimatedSection from "./components/AnimatedSection";
+import LandingSection from "./components/LandingSection";
+import CardContainer from "./components/CardContainer";
+import EmailFormSection from "./components/EmailFormSection";
+
+import cards1 from "./data/dummydata1";
+import cards2 from "./data/dummydata2";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <AnimatedSection>
+        <LandingSection />
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <CardContainer cards={cards1} />
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <CardContainer cards={cards2} backgroundColor='black' fullHeight/>
+      </AnimatedSection>
+
+      <footer>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          &copy; 2023 Ultimate Boilerplate App v2. Todos los derechos
+          reservados.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
