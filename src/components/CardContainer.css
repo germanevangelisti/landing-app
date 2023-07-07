@@ -21,6 +21,7 @@
 .card {
   width: 100%;
   max-width: 400px;
+  min-height: 280px;
   display: flex;
   align-items: center;
   margin: 20px;
@@ -44,10 +45,18 @@
   font-family: "montserrat-semi-bold";
   font-size: 24px;
   margin-bottom: 10px;
+  line-height: 25px;
 }
 
 .card-description p {
-  font-family: 'jaldi-bold';
+  font-family: "jaldi-bold";
   font-size: 16px;
   color: #666666;
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 300px;
+    flex-direction: column;
+  }
 }

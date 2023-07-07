@@ -28,7 +28,7 @@ const App = () => {
           sectionId="cards-section-2"
           cards={cards2}
           backgroundColor="black"
-          fullHeight
+          // fullHeight
         />
       </AnimatedSection>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Slide, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 import "./CardContainer.css";
 
@@ -10,7 +10,7 @@ const CardContainer = ({ cards, backgroundColor, fullHeight, sectionId }) => {
       className="info-section"
       style={{
         backgroundColor: backgroundColor ? backgroundColor : "grey",
-        height: fullHeight ? "100vh" : "unset",
+        height: fullHeight ? "100vh" : "unset", // footer bug
       }}
     >
       <div className="container">
