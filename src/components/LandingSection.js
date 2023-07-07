@@ -1,10 +1,12 @@
 import React from "react";
 
+import logo from "./../assets/logos/logo-no-background.png";
+
 import "./LandingSection.css";
 
 const LandingSection = () => {
   return (
-    <section className="video-section">
+    <section id="landing-section" className="video-section">
       <video autoPlay loop muted>
         <source
           src={"https://d16dak3q90pgxc.cloudfront.net/space-world.mp4"}
@@ -12,7 +14,7 @@ const LandingSection = () => {
         />
       </video>
       <div className="title-container">
-        <h1>Ultimate Boilerplate App v2</h1>
+        <img src={logo} alt={"logo"} />
       </div>
     </section>
   );

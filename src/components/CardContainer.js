@@ -3,10 +3,10 @@ import { Slide, Fade } from "react-awesome-reveal";
 
 import "./CardContainer.css";
 
-const CardContainer = ({ cards, backgroundColor, fullHeight }) => {
+const CardContainer = ({ cards, backgroundColor, fullHeight, sectionId }) => {
   return (
     <section
-      id="section2"
+      id={sectionId}
       className="info-section"
       style={{
         backgroundColor: backgroundColor ? backgroundColor : "grey",

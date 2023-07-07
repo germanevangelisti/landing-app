@@ -1,3 +1,15 @@
+@import "font-awesome";
+
+@font-face {
+  font-family: "montserrat-semi-bold";
+  src: url("./assets/fonts/montserrat-semi-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "jaldi-bold";
+  src: url("./assets/fonts/jaldi-bold.ttf") format("truetype");
+}
+
 /* Estilos generales */
 body {
   margin: 0;

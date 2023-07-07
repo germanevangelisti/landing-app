@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
+    "@svgr/webpack": "^8.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "font-awesome": "^4.7.0",
+    "font-awesome-sass": "^4.7.0",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.5",
     "react-dom": "^18.2.0",
@@ -16,7 +19,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:local": "webpack serve --color",
     "build": "react-scripts build",
+    "build:develop": "webpack --mode development",
+    "build:prod": "webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -37,5 +43,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
+    "@babel/preset-env": "^7.22.7",
+    "@babel/preset-react": "^7.22.5",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
   }
 }
