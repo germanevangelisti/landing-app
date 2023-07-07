@@ -14,7 +14,7 @@
   z-index: -1;
 }
 
-.title-container {
+.logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,17 @@
   color: #fff;
 }
 
-.title-container h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    width: 95%;
+  }
 }

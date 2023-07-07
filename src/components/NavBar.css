@@ -1,10 +1,6 @@
 .navbar {
   position: sticky;
   top: 0;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
-  /* padding: 20px; */
   background-color: #292727;
   z-index: 1;
 }
@@ -13,6 +9,18 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+.navbar-menu.active {
+  max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
 }
 
 .navbar-logo {
@@ -35,7 +43,7 @@
 .navbar-links button {
   background: none;
   border: none;
-  font-family: 'jaldi-bold';
+  font-family: "jaldi-bold";
   font-size: 16px;
   color: #ffffff;
   cursor: pointer;
@@ -43,4 +51,22 @@
 
 .navbar-links button:hover {
   text-decoration: underline;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+  }
 }

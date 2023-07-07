@@ -1,6 +1,7 @@
 import React from "react";
 
 import logo from "./../assets/logos/logo-no-background.png";
+import logoVertical from "./../assets/logos/logo-vertical-no-background.png";
 
 import "./LandingSection.css";
 
@@ -13,8 +14,9 @@ const LandingSection = () => {
           type="video/mp4"
         />
       </video>
-      <div className="title-container">
-        <img src={logo} alt={"logo"} />
+      <div className="logo-container">
+        <img className="desktop" src={logo} alt={"logo"} />
+        <img className="mobile" src={logoVertical} alt={"logoVertical"} />
       </div>
     </section>
   );
