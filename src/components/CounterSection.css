@@ -1,0 +1,13 @@
+.counters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 15%;
+}
+
+@media (max-width: 768px) {
+  .counters-container {
+    flex-direction: column;
+  }
+}

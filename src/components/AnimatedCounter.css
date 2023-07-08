@@ -1,0 +1,28 @@
+.counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 5.2);
+  padding: 30px;
+  border-radius: 20px;
+  min-width: 150px;
+}
+
+.name {
+  font-family: "jaldi-bold";
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.counter {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .counter-wrapper {
+    margin-bottom: 30px;
+  }
+}

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import MobileDrawer from "./MobileDrawer";
 
@@ -24,21 +22,24 @@ const Navbar = () => {
       link: "/",
       name: "Landing Section",
       onClick: () => handleScrollToSection("#landing-section"),
-      // icon: <HomeIcon className="text-white" />,
     },
     {
       id: "#card-section-1",
       link: "/section-1",
       name: "Card Section 1",
       onClick: () => handleScrollToSection("#cards-section-1"),
-      // icon: <BookIcon className="text-white" />,
     },
     {
       id: "#card-section-2",
       link: "/section-2",
       name: "Card Section 2",
       onClick: () => handleScrollToSection("#cards-section-2"),
-      // icon: <HowToRegIcon className="text-white" />,
+    },
+    {
+      id: "#counter-section",
+      link: "/counter-section",
+      name: "Counters",
+      onClick: () => handleScrollToSection("#counter-section"),
     },
   ];
 

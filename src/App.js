@@ -5,11 +5,12 @@ import AnimatedSection from "./components/AnimatedSection";
 import NavBar from "./components/NavBar";
 import LandingSection from "./components/LandingSection";
 import CardContainer from "./components/CardContainer";
-// import EmailFormSection from "./components/EmailFormSection";
+import CounterSection from "./components/CounterSection";
 import Footer from "./components/Footer";
 
 import cards1 from "./data/dummydata1";
 import cards2 from "./data/dummydata2";
+import counters from "./data/dummydata3";
 
 const App = () => {
   return (
@@ -30,6 +31,10 @@ const App = () => {
           backgroundColor="black"
           // fullHeight
         />
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <CounterSection counters={counters} />
       </AnimatedSection>
 
       <Footer />
