@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   background-color: #292727;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .navbar-wrapper {
@@ -27,7 +27,7 @@
   padding-left: 10px;
   font-family: "montserrat-semi-bold";
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .navbar-links {
@@ -44,7 +44,7 @@
   background: none;
   border: none;
   font-family: "jaldi-bold";
-  font-size: 16px;
+  font-size: 20px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -55,6 +55,52 @@
 
 .navbar-toggle {
   display: none;
+}
+
+.bar-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.changedBar-container {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.changeBar1 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  opacity: 1;
+  transform: translate(0) rotate(-45deg);
+}
+
+.changeBar2 {
+  opacity: 0;
+}
+
+.changeBar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  opacity: 1;
+  transform: translate(0, -11px) rotate(45deg);
 }
 
 @media (max-width: 768px) {
@@ -68,5 +114,6 @@
     height: 35px;
     align-items: center;
     justify-content: center;
+    padding-right: 12px;
   }
 }

@@ -1,0 +1,43 @@
+/* .navbar-menu {
+  width: 100px;
+  background-color: red;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-links button {
+  background: none;
+  border: none;
+  font-family: "jaldi-bold";
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar-links button:hover {
+  text-decoration: underline;
+} */
+.drawer-list button {
+  background: none;
+  border: none;
+  font-family: "jaldi-bold";
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.headSection {
+  background-color: transparent;
+}
+
+.drawer-wrapper {
+  background-color: transparent;
+}
