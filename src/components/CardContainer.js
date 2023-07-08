@@ -3,10 +3,9 @@ import { Fade } from "react-awesome-reveal";
 
 import "./CardContainer.css";
 
-const CardContainer = ({ cards, backgroundColor, fullHeight, sectionId }) => {
+const CardContainer = ({ cards, backgroundColor, fullHeight }) => {
   return (
-    <section
-      id={sectionId}
+    <div
       className="info-section"
       style={{
         backgroundColor: backgroundColor ? backgroundColor : "grey",
@@ -33,7 +32,7 @@ const CardContainer = ({ cards, backgroundColor, fullHeight, sectionId }) => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

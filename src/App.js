@@ -16,24 +16,23 @@ const App = () => {
   return (
     <div>
       <NavBar />
-      <AnimatedSection>
+      <AnimatedSection sectionId="landing-section">
         <LandingSection />
       </AnimatedSection>
 
-      <AnimatedSection>
-        <CardContainer sectionId="cards-section-1" cards={cards1} />
+      <AnimatedSection sectionId="cards-section-1">
+        <CardContainer cards={cards1} />
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection sectionId="cards-section-2">
         <CardContainer
-          sectionId="cards-section-2"
           cards={cards2}
           backgroundColor="black"
           // fullHeight
         />
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection sectionId="counter-section">
         <CounterSection counters={counters} />
       </AnimatedSection>
 

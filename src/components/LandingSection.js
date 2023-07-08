@@ -7,7 +7,7 @@ import "./LandingSection.css";
 
 const LandingSection = () => {
   return (
-    <section id="landing-section" className="video-section">
+    <div className="video-section">
       <video autoPlay loop muted>
         <source
           src={"https://d16dak3q90pgxc.cloudfront.net/space-world.mp4"}
@@ -18,7 +18,7 @@ const LandingSection = () => {
         <img className="desktop" src={logo} alt={"logo"} />
         <img className="mobile" src={logoVertical} alt={"logoVertical"} />
       </div>
-    </section>
+    </div>
   );
 };
 

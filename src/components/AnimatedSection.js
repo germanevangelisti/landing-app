@@ -3,9 +3,11 @@ import { Fade } from "react-awesome-reveal";
 
 import "./AnimatedSection.css";
 
-const AnimatedSection = ({ children, animation }) => (
+const AnimatedSection = ({ children, animation, sectionId }) => (
   <Fade cascade>
-    <div className="section">{children}</div>
+    <section id={sectionId} className="section">
+      {children}
+    </section>
   </Fade>
 );
 

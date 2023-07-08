@@ -6,7 +6,7 @@ import "./CounterSection.css";
 
 const CounterSection = ({ counters }) => {
   return (
-    <section id="counter-section" className="counters-container">
+    <div className="counters-container">
       {counters.map((item, index) => (
         <AnimatedCounter
           key={index}
@@ -15,7 +15,7 @@ const CounterSection = ({ counters }) => {
           icon={item.icon}
         />
       ))}
-    </section>
+    </div>
   );
 };
 
