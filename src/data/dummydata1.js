@@ -15,6 +15,7 @@ const cards = [
     description:
       "Dale a tu vehículo un toque único con nuestros servicios de personalización de caños de escape. Te ofrecemos opciones de diseño y acabado personalizadas para satisfacer tus necesidades y preferencias.",
     image: image2,
+    overlayText: "This is a test for showing overlay text on a card.",
   },
   {
     title: "Revisión y Mantenimiento Preventivo",
@@ -27,6 +28,8 @@ const cards = [
     description:
       "Realizamos el reemplazo de catalizadores en sistemas de escape para garantizar un funcionamiento eficiente y cumplir con las regulaciones medioambientales. Utilizamos piezas de calidad y técnicas de instalación precisas.",
     image: image4,
+    overlayText:
+      "Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores. Ipsa dolor sit ile magnam maores.",
   },
 ];
 

@@ -1,4 +1,4 @@
-.info-section {
+.card-container {
   padding: 60px 0;
   text-align: center;
   background-color: grey;
@@ -6,12 +6,12 @@
   overflow: hidden;
 }
 
-.info-section h2 {
+.card-container h2 {
   font-size: 32px;
   margin-bottom: 40px;
 }
 
-.card-container {
+.card-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -52,6 +52,36 @@
   font-family: "jaldi-bold";
   font-size: 16px;
   color: #666666;
+}
+
+.overlayText {
+  position: relative;
+  top: -150px;
+  left: 0px;
+  z-index: 1;
+  bottom: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+}
+
+.overlay:hover .overlayText {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-in;
+}
+
+.overlay:hover .originalText {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+}
+
+.overlay:not(:hover) .originalText {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-in;
 }
 
 @media (max-width: 768px) {

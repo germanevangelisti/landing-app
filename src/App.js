@@ -19,23 +19,15 @@ const App = () => {
       <AnimatedSection sectionId="landing-section">
         <LandingSection />
       </AnimatedSection>
-
       <AnimatedSection sectionId="cards-section-1">
         <CardContainer cards={cards1} />
       </AnimatedSection>
-
       <AnimatedSection sectionId="cards-section-2">
-        <CardContainer
-          cards={cards2}
-          backgroundColor="black"
-          // fullHeight
-        />
+        <CardContainer cards={cards2} backgroundColor="black" />
       </AnimatedSection>
-
       <AnimatedSection sectionId="counter-section">
         <CounterSection counters={counters} />
       </AnimatedSection>
-
       <Footer />
     </div>
   );
