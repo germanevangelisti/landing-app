@@ -43,7 +43,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="root">
+    <React.Fragment>
       <nav className="navbar">
         <div className="navbar-wrapper">
           <p className="navbar-logo">UBA-1</p>
@@ -72,7 +72,7 @@ const Navbar = () => {
         // selectedItem={selectedTab}
         onClose={toggleMenu}
       />
-    </div>
+    </React.Fragment>
   );
 };
 
