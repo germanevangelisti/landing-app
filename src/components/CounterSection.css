@@ -4,6 +4,7 @@
   align-items: center;
   padding: 50px;
   gap: 15%;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
