@@ -41,6 +41,29 @@
   flex-grow: 1;
 }
 
+.standard-card {
+  width: 100%;
+  max-width: 400px;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.standard-card-description h3 {
+  text-align: left;
+  text-transform: uppercase;
+  color: rgb(6, 6, 109)
+}
+
+.standard-card-description p {
+  font-family: "jaldi-bold";
+  font-size: 16px;
+  color: rgb(101, 64, 64);
+  text-align: left;
+}
+
 .card-description h3 {
   font-family: "montserrat-semi-bold";
   font-size: 24px;

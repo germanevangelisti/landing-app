@@ -1,0 +1,40 @@
+.card-with-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .descriptions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .description-item p {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 10px;
+    border-left: 5px solid red; /* Customize to match brand color */
+  }
+  
+  .images-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .grid-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional, for rounded corners */
+  }
+  
+  @media (max-width: 768px) {
+    .card-with-images {
+      grid-template-columns: 1fr;
+    }
+  }
+  
