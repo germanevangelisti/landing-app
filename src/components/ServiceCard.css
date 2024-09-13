@@ -1,8 +1,13 @@
 .services-section {
-    padding: 2rem;
+    padding: 0;
     background: white;
     position: relative;
     overflow: hidden;
+    height: 100vh; /* Altura total de la ventana */
+    width: 100vw; /* Ancho total de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
 }
 
 .background-design {
@@ -37,6 +42,15 @@
     height: 50%;
     background-color: #8B0000; /* Color rojo oscuro */
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.services-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 20px; /* Aumentamos el padding superior para compensar la navbar */
+    position: relative;
+    z-index: 2;
 }
 
 .services-grid {

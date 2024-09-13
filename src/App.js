@@ -18,6 +18,13 @@ import { gallinasPonedoras } from "./data/gallinas_ponedoras";
 import { faenadorMovil } from "./data/faenador_movil";
 import { parasoles } from "./data/parasoles";
 import { solucionesIntegral } from "./data/soluciones_integrales";
+
+import lubricentroIcon from "./assets/lubricentro_movil.png";
+import gallinasPonedorasIcon from "./assets/gallinas_ponedoras.png";
+import faenadorMovilIcon from "./assets/faenador_movil.png";
+import parasolesIcon from "./assets/parasoles.png";
+import solucionesIntegralesIcon from "./assets/soluciones_integrales.png";
+
 import ServicesSection from "./components/ServicesSection";
 
 const App = () => {
@@ -31,19 +38,19 @@ const App = () => {
         <ServicesSection />
       </AnimatedSection>
       <AnimatedSection sectionId="lubricentro-movil-section">
-        <CardContainer title="Lubricentro Móvil" cards={lubricentroMovil} backgroundColor="white" />
+        <CardContainer title="Lubricentro Móvil" icon={lubricentroIcon} cards={lubricentroMovil} backgroundColor="white" />
       </AnimatedSection>
        <AnimatedSection sectionId="galinas-ponedoras-section">
-        <CardContainer title="Sistema Integral Semi Automático Para Gallina Ponedoras" cards={gallinasPonedoras} backgroundColor="white" />
+        <CardContainer title="Sistema Integral Semi Automático Para Gallina Ponedoras" icon={gallinasPonedorasIcon} cards={gallinasPonedoras} backgroundColor="white" />
       </AnimatedSection>
       <AnimatedSection sectionId="faenador-movil-section">
-        <CardContainer title="Faenador Móvil" cards={faenadorMovil} backgroundColor="white" />
+        <CardContainer title="Faenador Móvil" icon={faenadorMovilIcon} cards={faenadorMovil} backgroundColor="white" />
       </AnimatedSection>
       <AnimatedSection sectionId="parasoles-section">
-        <CardContainer title="Parasoles" cards={parasoles} backgroundColor="white" />
+          <CardContainer title="Parasoles" icon={parasolesIcon} cards={parasoles} backgroundColor="white" />
       </AnimatedSection>
       <AnimatedSection sectionId="soluciones-integrales-section">
-        <CardContainer title="Soluciones Integrales Para Constructoras" cards={solucionesIntegral} backgroundColor="white" />
+        <CardContainer title="Soluciones Integrales Para Constructoras" icon={solucionesIntegralesIcon} cards={solucionesIntegral} backgroundColor="white" />
       </AnimatedSection> 
       {/*<AnimatedSection sectionId="cards-section-1">
         <CardContainer cards={cards1} />

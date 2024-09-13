@@ -1,16 +1,46 @@
 import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './CardContainer.css';
 
-const CardContainer = ({ title, cards = [], backgroundColor }) => {
-  console.log('Cards prop:', cards);
+const CardContainer = ({ title, cards = [], backgroundColor, icon }) => {
   const card = cards[0] || { descriptions: [], images: [] };
-  console.log('Card being used:', card);
+
+  const settings = {
+    dots: false,
+    infinite: true, // Cambiado a true para efecto infinito
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    draggable: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  };
 
   return (
     <div className="card-container" style={{ backgroundColor }}>
       <div className="content-wrapper">
-        <h3 className="subtitle">DESARROLLO DE ALGUNOS SERVICIOS</h3>
-        <h2 className="title">{title}</h2>
+        <div className="title-container">
+          <h3 className="subtitle">DESARROLLO DE ALGUNOS SERVICIOS</h3>
+          <h2 className="title">
+            {title}
+            {icon && <img src={icon} alt={title} className="title-icon" />}
+          </h2>
+        </div>
         <div className="card-content">
           <div className="description-list">
             {card.descriptions.map((desc, index) => (
@@ -20,14 +50,19 @@ const CardContainer = ({ title, cards = [], backgroundColor }) => {
               </div>
             ))}
           </div>
-          <div className="images-grid">
-            {card.images.map((image, index) => (
-              <img key={index} src={image} alt={`Service ${index + 1}`} className="grid-image" />
-            ))}
-          </div>
         </div>
       </div>
+      <div className="carousel-container">
+        <Slider {...settings}>
+          {card.images.map((image, index) => (
+            <div key={index} className="carousel-item">
+              <img src={image} alt={`Service ${index + 1}`} className="carousel-image" />
+            </div>
+          ))}
+        </Slider>
+      </div>
       <div className="background-design"></div>
+      <div className="slide-number">06</div>
     </div>
   );
 };

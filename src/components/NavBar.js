@@ -16,6 +16,20 @@ const Navbar = () => {
     section.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbarHeight = document.querySelector('.navbar').offsetHeight;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const menuItems = [
     {
       id: "#landing-section",
@@ -23,24 +37,30 @@ const Navbar = () => {
       name: "Landing Section",
       onClick: () => handleScrollToSection("#landing-section"),
     },
+    // {
+    //   id: "#card-section-1",
+    //   link: "/section-1",
+    //   name: "Card Section 1",
+    //   onClick: () => handleScrollToSection("#cards-section-1"),
+    // },
+    // {
+    //   id: "#card-section-2",
+    //   link: "/section-2",
+    //   name: "Card Section 2",
+    //   onClick: () => handleScrollToSection("#cards-section-2"),
+    // },
+    // {
+    //   id: "#counter-section",
+    //   link: "/counter-section",
+    //   name: "Counters",
+    //   onClick: () => handleScrollToSection("#counter-section"),
+    // },
     {
-      id: "#card-section-1",
-      link: "/section-1",
-      name: "Card Section 1",
-      onClick: () => handleScrollToSection("#cards-section-1"),
-    },
-    {
-      id: "#card-section-2",
-      link: "/section-2",
-      name: "Card Section 2",
-      onClick: () => handleScrollToSection("#cards-section-2"),
-    },
-    {
-      id: "#counter-section",
-      link: "/counter-section",
-      name: "Counters",
-      onClick: () => handleScrollToSection("#counter-section"),
-    },
+      id: "services-section",
+      link: "/services-section",
+      name: "Servicios",
+      onClick: () => handleScrollToSection("#services-section"),
+    }
   ];
 
   return (
