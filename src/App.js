@@ -18,6 +18,7 @@ import { gallinasPonedoras } from "./data/gallinas_ponedoras";
 import { faenadorMovil } from "./data/faenador_movil";
 import { parasoles } from "./data/parasoles";
 import { solucionesIntegral } from "./data/soluciones_integrales";
+import ServicesSection from "./components/ServicesSection";
 
 const App = () => {
   return (
@@ -27,12 +28,12 @@ const App = () => {
         <LandingSection />
       </AnimatedSection>
       <AnimatedSection sectionId="services-section">
-        <CardContainer title="Servicios" cards={servicesData} backgroundColor="white" />
+        <ServicesSection />
       </AnimatedSection>
       <AnimatedSection sectionId="lubricentro-movil-section">
         <CardContainer title="Lubricentro Móvil" cards={lubricentroMovil} backgroundColor="white" />
       </AnimatedSection>
-      <AnimatedSection sectionId="galinas-ponedoras-section">
+       <AnimatedSection sectionId="galinas-ponedoras-section">
         <CardContainer title="Sistema Integral Semi Automático Para Gallina Ponedoras" cards={gallinasPonedoras} backgroundColor="white" />
       </AnimatedSection>
       <AnimatedSection sectionId="faenador-movil-section">
@@ -43,8 +44,8 @@ const App = () => {
       </AnimatedSection>
       <AnimatedSection sectionId="soluciones-integrales-section">
         <CardContainer title="Soluciones Integrales Para Constructoras" cards={solucionesIntegral} backgroundColor="white" />
-      </AnimatedSection>
-      <AnimatedSection sectionId="cards-section-1">
+      </AnimatedSection> 
+      {/*<AnimatedSection sectionId="cards-section-1">
         <CardContainer cards={cards1} />
       </AnimatedSection>
       <AnimatedSection sectionId="cards-section-2">
@@ -52,7 +53,7 @@ const App = () => {
       </AnimatedSection>
       <AnimatedSection sectionId="counter-section">
         <CounterSection counters={counters} />
-      </AnimatedSection>
+      </AnimatedSection>*/}
       <Footer />
     </div>
   );

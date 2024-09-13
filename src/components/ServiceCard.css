@@ -1,0 +1,112 @@
+.services-section {
+    padding: 2rem;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-design {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+}
+
+.background-design::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(135deg, #000080, #4B0082);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    background-image: url('../assets/soldador3.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.background-design::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #8B0000; /* Color rojo oscuro */
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    object-fit: contain;
+}
+
+.service-content {
+    flex: 1;
+}
+
+h2 {
+    color: #000080;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #000080;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+p {
+    color: #000080;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .background-design {
+        width: 50%;
+    }
+}

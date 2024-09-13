@@ -1,53 +1,33 @@
-import React from "react";
-import { Fade } from "react-awesome-reveal";
-import OverlayCard from "./OverlayCard";
-import CardWithImages from "./CardWithImages";
-import "./CardContainer.css";
+import React from 'react';
+import './CardContainer.css';
 
-const CardContainer = ({ title, cards, backgroundColor, backgroundImage, fullHeight }) => {
+const CardContainer = ({ title, cards = [], backgroundColor }) => {
+  console.log('Cards prop:', cards);
+  const card = cards[0] || { descriptions: [], images: [] };
+  console.log('Card being used:', card);
+
   return (
-    <div
-      className="card-container"
-      style={{
-        backgroundColor: backgroundColor || "grey",
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: fullHeight ? "100vh" : "unset",
-      }}
-    >
-      {title && <h2 className="card-container-title">{title}</h2>}
-
-      <div className="card-wrapper">
-        {cards.map((card, index) => (
-          <Fade delay={index * 200} triggerOnce key={index}>
-            {card.descriptions && card.images ? (
-              // Render CardWithImages if descriptions and images are provided
-              <CardWithImages 
-                descriptions={card.descriptions} 
-                images={card.images} 
-              />
-            ) : card.overlayText ? (
-              // Render OverlayCard if overlayText is provided
-              <OverlayCard
-                image={card.image}
-                title={card.title}
-                description={card.description}
-                overlayText={card.overlayText}
-              />
-            ) : (
-              // Fallback to the standard card layout otherwise
-              <div className="card">
-                <img width={150} height={150} src={card.image} alt={card.title} />
-                <div className="card-description">
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
-                </div>
+    <div className="card-container" style={{ backgroundColor }}>
+      <div className="content-wrapper">
+        <h3 className="subtitle">DESARROLLO DE ALGUNOS SERVICIOS</h3>
+        <h2 className="title">{title}</h2>
+        <div className="card-content">
+          <div className="description-list">
+            {card.descriptions.map((desc, index) => (
+              <div key={index} className="description-item">
+                <span className="bullet">▶</span>
+                <p>{desc}</p>
               </div>
-            )}
-          </Fade>
-        ))}
+            ))}
+          </div>
+          <div className="images-grid">
+            {card.images.map((image, index) => (
+              <img key={index} src={image} alt={`Service ${index + 1}`} className="grid-image" />
+            ))}
+          </div>
+        </div>
       </div>
+      <div className="background-design"></div>
     </div>
   );
 };

@@ -1,115 +1,119 @@
 .card-container {
   padding: 60px 0;
-  text-align: center;
-  background-color: grey;
   position: relative;
   overflow: hidden;
 }
 
-.card-container h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.card-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.card {
-  width: 100%;
-  max-width: 400px;
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-  margin: 20px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-  object-fit: cover;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-
-.card-description {
-  flex-grow: 1;
-}
-
-.standard-card {
-  width: 100%;
-  max-width: 400px;
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-  margin: 20px;
-  padding: 20px;
-}
-
-.standard-card-description h3 {
-  text-align: left;
-  text-transform: uppercase;
-  color: rgb(6, 6, 109)
-}
-
-.standard-card-description p {
-  font-family: "jaldi-bold";
-  font-size: 16px;
-  color: rgb(101, 64, 64);
-  text-align: left;
-}
-
-.card-description h3 {
-  font-family: "montserrat-semi-bold";
-  font-size: 24px;
-  margin-bottom: 10px;
-  line-height: 25px;
-}
-
-.card-description p {
-  font-family: "jaldi-bold";
-  font-size: 16px;
-  color: #666666;
-}
-
-.overlayText {
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   position: relative;
-  top: -150px;
-  left: 0px;
+  z-index: 2;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 36px;
+  color: #000080;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.title::after {
+  content: url('../assets/logos/logo-vertical-no-background.png'); /* Replace with your icon */
+  margin-left: 15px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description-list {
+  width: 60%;
+}
+
+.description-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.bullet {
+  color: #8B0000;
+  margin-right: 10px;
+}
+
+.description-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.images-grid {
+  width: 35%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.background-design {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
   z-index: 1;
-  bottom: 20px;
-
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-out;
 }
 
-.overlay:hover .overlayText {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1s ease-in;
+.background-design::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 75%;
+  background: linear-gradient(135deg, #000080, #4B0082);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  background-image: url('../assets/soldador3.png');
+  background-size: cover;
+  background-position: center;
 }
 
-.overlay:hover .originalText {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-out;
-}
-
-.overlay:not(:hover) .originalText {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1s ease-in;
+.background-design::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #8B0000;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 
 @media (max-width: 768px) {
-  .card {
-    max-width: 300px;
+  .card-content {
     flex-direction: column;
+  }
+
+  .description-list, .images-grid {
+    width: 100%;
+  }
+
+  .background-design {
+    width: 50%;
   }
 }
