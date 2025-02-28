@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import LandingSection from "./components/LandingSection";
 import CardContainer from "./components/CardContainer";
 import CounterSection from "./components/CounterSection";
+import CardSection from "./components/CardSection";
 import Footer from "./components/Footer";
 
 import cards1 from "./data/dummydata1";
@@ -36,6 +37,16 @@ const App = () => {
       </AnimatedSection>
       <AnimatedSection sectionId="services-section">
         <ServicesSection />
+      </AnimatedSection>
+      <AnimatedSection sectionId="lubricentro-movil-section">
+        <CardSection
+          title="Lubricentro Móvil"
+          subtitle="DESARROLLO DE ALGUNOS SERVICIOS"
+          icon={lubricentroIcon}
+          cards={lubricentroMovil}
+          backgroundColor="white"
+          slideNumber="04"
+        />
       </AnimatedSection>
       <AnimatedSection sectionId="lubricentro-movil-section">
         <CardContainer title="Lubricentro Móvil" icon={lubricentroIcon} cards={lubricentroMovil} backgroundColor="white" />

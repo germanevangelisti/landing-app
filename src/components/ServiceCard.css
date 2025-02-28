@@ -81,6 +81,22 @@
     flex: 1;
 }
 
+.service-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #000080;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.service-content p {
+    color: #000080;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-family: 'Arial', sans-serif;
+}
+
 h2 {
     color: #000080;
     font-size: 2.5rem;

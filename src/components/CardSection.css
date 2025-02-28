@@ -1,0 +1,99 @@
+.card-content {
+  margin-bottom: 30px;
+}
+
+.description-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.bullet {
+  color: #000080;
+  margin-right: 10px;
+}
+
+.carousel-container {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Coloca el carrusel debajo del triángulo */
+  padding-bottom: 20px;
+}
+
+.carousel-item {
+  padding: 0 10px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Estilos para el slider */
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000080;
+}
+
+/* Ajusta el contenedor principal */
+.page-layout {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2; /* Asegura que el contenido esté por encima del carrusel */
+  padding-bottom: 220px; /* Espacio para el carrusel */
+}
+
+/* Ajusta el fondo para que se superponga al carrusel */
+.background-design {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 3; /* Coloca el fondo por encima del carrusel */
+  overflow: visible; /* Permite que el triángulo se extienda fuera del contenedor */
+}
+
+.background-design::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250%; /* Extiende el triángulo más allá del contenedor */
+  height: 60%;
+  background-color: #8B0000;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+/* Asegúrate de que el número de diapositiva esté por encima de todo */
+.slide-number {
+  z-index: 4;
+}
